@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 /* This is a practice program that simulates a vending machine. 
 Program will print an inventory with a unit number. 
 User will choose a product and input the unit number. 
@@ -26,41 +29,36 @@ class Menu{
 		}
 };
 
-function selection(userInput, check){
-	int userInput = 00;
-	bool check;
-	float chips = 2.50;
-	float candy = 1.75;
-	float drinks = 2.75;
-	cin << userInput;
-	cout << "You have selected " << userInput \n;
-	if (userInput <= 10){
-		cout << "Price: " << chips \n;
-	}
-	else if(userInput > 10 && userInput <= 15){
-		cout << "Price: " << candy \n;
-	}
-	else{
-		cout << "Price: " << soda \n;
-	}
-	cout << "Would you like to continue with this selection (T/F)";
-	cin << check;
-	if (check == true){
-	cout << "Enjoy your purchase!"
-	}
-	else{
-	cout << "Please select the desired item"
-	userInput = 00;
-	}
-	userInput = 00;
-}
 
 int main(){
 	Menu cust;
 	cust.Inventory();
-	int u = 00; 
-	bool c = true; 
-	selection(u,c);
+	int	userInput;
+	bool check;
+	float chips = 2.50;
+	float candy = 1.75;
+	float drinks = 2.75;
+	cin >> userInput;
+	cout << "You have selected " << userInput << "\n";
+	if (userInput <= 10){
+		cout << "Price: " << chips << "\n";
+	}
+	else if(userInput > 10 && userInput <= 15){
+		cout << "Price: " << candy << "\n";
+	}
+	else{
+		cout << "Price: " << drinks << "\n";
+	}
+	cout << "Would you like to continue with this selection (T/F)";
+	cin >> check;
+	if (check == true){
+	cout << "Enjoy your purchase!";
+	}
+	else{
+	cout << "Please select the desired item";
+	userInput = 00;
+	}
+	userInput = 00;
 	return 0;
 }
 	
